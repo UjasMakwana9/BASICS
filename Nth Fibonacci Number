@@ -1,0 +1,17 @@
+    int nthFibonacci(int n){
+        
+        
+        if(n==1 || n==0)
+        return n;
+        
+        int spre=0,pre=1;
+        int sum=0;
+        
+        for(int i=1;i<n;i++)
+        {
+            sum=(spre+pre)%m;
+            spre=pre%m;
+            pre=sum%m;
+        }
+        return sum;
+    }
